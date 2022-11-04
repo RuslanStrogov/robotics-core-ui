@@ -1,15 +1,15 @@
 {
-    "name": "roborics",
+    "name": "robotics",
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
         "ng": "nx",
-        "postinstall": "node ./decorate-angular-cli.js",
+        "postinstall": "ngcc --properties es2015 es5 browser module main --first-only --create-ivy-entry-points --tsconfig \"./src/tsconfig.app.json\"",
         "start": "nx serve",
+        "start:api": "nx serve api",
         "build": "nx build",
         "test": "nx test",
-        "lint": "eslint",
-        "postinstall": "ngcc --properties es2015 es5 browser module main --first-only --create-ivy-entry-points --tsconfig \"./src/tsconfig.app.json\""
+        "lint": "eslint"
     },
     "private": true,
     "dependencies": {
@@ -21,6 +21,7 @@
         "@angular/platform-browser": "~14.2.0",
         "@angular/platform-browser-dynamic": "~14.2.0",
         "@angular/router": "~14.2.0",
+        "@joelwenzel/ng-flowchart": "^1.0.0-beta.13",
         "@nebular/auth": "9.0.2",
         "@nebular/eva-icons": "9.0.2",
         "@nebular/security": "9.0.2",

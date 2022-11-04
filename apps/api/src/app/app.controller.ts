@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-import { Message } from '@roborics/api-interfaces';
+import { Message } from '@robotics/api-interfaces';
 
 import { AppService } from './app.service';
 

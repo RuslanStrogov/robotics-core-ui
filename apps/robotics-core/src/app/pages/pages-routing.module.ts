@@ -17,6 +17,11 @@ const routes: Routes = [{
       redirectTo: 'dashboard',
       pathMatch: 'full',
     },
+    {
+      path: 'hardware',
+      loadChildren: () => import('./../modules/hardware/hardware.module')
+        .then(m => m.HardwareModule),
+    },
   ],
 }];
 

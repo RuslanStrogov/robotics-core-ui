@@ -1,0 +1,42 @@
+<div class="row">
+    <nb-card>
+        <nb-card-body>Hello from ngx-admin sandbox project.
+
+
+
+        </nb-card-body>
+    </nb-card>
+</div>
+
+<div class="some-container-with-large-dimensions" ngFlowchartCanvas>
+</div>
+
+<div id="canvas" ngFlowchartCanvas [ngFlowchartOptions]="{
+  stepGap: 40
+}"></div>
+
+<div class="palette">
+    <div *ngFor="let item of items" [ngFlowchartStep]="{
+      template: stepContent,
+      type: item.type,
+      data: item.data
+    }">
+        <span>{{item.name}}</span>
+    </div>
+</div>
+<!-- <ng-template #stepContent>
+    <div class="step-container">
+        <div class="step-heading">
+            heading
+        </div>
+        <div class="step-content">
+            content
+        </div>
+    </div>
+</ng-template> -->
+
+<ng-template #stepContent let-data>
+    <div class="step" (click)="onDelete(data.id)">
+        <span>{{ data.data.name }}</span>
+    </div>
+</ng-template>
