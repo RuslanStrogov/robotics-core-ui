@@ -17,7 +17,7 @@
                 "inlineStyleLanguage": "scss",
                 "stylePreprocessorOptions": {
                     "includePaths": [
-                        "node_modules/"
+                        "./node_modules"
                     ]
                 },
                 "assets": [
@@ -26,14 +26,14 @@
                 ],
                 "styles": [
                     "apps/robotics-core/src/styles.scss",
+                    "node_modules/@nebular/theme/styles/prebuilt/default.css",
                     "node_modules/bootstrap/dist/css/bootstrap.css",
                     "node_modules/typeface-exo/index.css",
                     "node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
-                    "node_modules/ionicons/scss/ionicons.scss",
                     "node_modules/socicon/css/socicon.css",
                     "node_modules/nebular-icons/scss/nebular-icons.scss",
-                    "node_modules/pace-js/templates/pace-theme-flash.tmpl.css",
-                    "apps/robotics-core/src/app/@theme/styles/styles.scss"
+                    "node_modules/pace-js/templates/pace-theme-flash.tmpl.css"
+
                 ],
                 "scripts": [
                     "node_modules/pace-js/pace.min.js"

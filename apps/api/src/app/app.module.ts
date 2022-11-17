@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SequelizeModule } from '@nestjs/sequelize';
-
+import { ScheduleModule } from '@nestjs/schedule';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -34,6 +34,8 @@ import { TestModel } from './modules/voice/test.model';
       database: 'robotics',
       models: [TestModel],
     }),
+
+    ScheduleModule.forRoot(),
 
     VoiceModule,
   ],
