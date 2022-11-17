@@ -22,11 +22,41 @@ export class VoiceController {
   @ApiQuery({name: 'speed', type: Number, required: false})
     voiceSayText(
     @Query('text') text: String = 'Hello',
-    @Query('speed', new DefaultValuePipe(5), ParseIntPipe) speed: Number = 0.5
+    @Query('speed') speed: Number = 1
   ){
     console.log('getDocuments', text, speed);
-    return this.voiceService.say(text);
+    return this.voiceService.say(text, speed);
     // return this.documentsService.getDocuments(page, limit);
+  }
+
+  @Get('startInterval')
+  startInterval(): any {
+    return this.voiceService.startInterval();
+  }
+
+  @Get('stopInterval')
+  stopInterval(): any {
+    return this.voiceService.stopInterval();
+  }
+
+
+
+
+
+  @Get('createTestModel')
+  async createTestModel(): Promise<any> {
+    return await this.voiceService.createTestModel();
+  }
+
+
+  @Get('findAllTestModel')
+  async findAllTestModel(): Promise<any> {
+    return await this.voiceService.findAllTestModel();
+  }
+
+  @Get('getJson')
+  getJson(): any {
+    return this.voiceService.getJson();
   }
 
   @Get('getInstalledVoices')
