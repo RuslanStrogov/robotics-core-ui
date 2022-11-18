@@ -1,6 +1,6 @@
 @import '../../styles/themes';
 @import 'node_modules/bootstrap/scss/mixins/breakpoints';
-@import '~@nebular/theme/styles/global/breakpoints';
+@import 'node_modules/@nebular/theme/styles/global/breakpoints';
 @include nb-install-component() {
     .switch-label {
         display: flex;
