@@ -5,3 +5,7 @@
 ---
 
 Nx моно-репозиторий: Angular + NestJS. Речевой синтез, распознавание голоса, балансировка нагрузки, базы данных.
+
+## Architecture
+
+![Nx Monorepo Architecture](diagram.png)
